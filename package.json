@@ -1,8 +1,9 @@
 {
-	"name": "@rbxts/roblox-ts-package-template",
-	"version": "1.0.0",
+	"name": "@rbxts/easy-zone-plus",
+	"description": "Fixes: #72, #68, #47, #67, #70, #45, #61, #56, #52, #49, #48, #44, #42, #41, #40, #39",
+	"version": "3.2.0-ts.0",
 	"main": "dist/init.lua",
-	"keywords": [],
+	"keywords": ["zone-plus", "area", "region3"],
 	"author": "kineticwallet",
 	"license": "MIT",
 	"types": "dist/index.d.ts",
@@ -18,9 +19,12 @@
 		"rbxts-transformer-private": "^1.0.1",
 		"rbxts-transformer-services": "^1.1.1",
 		"roblox-ts": "^2.3.0",
-		"typescript": "=5.2.2"
+		"typescript": "^5.2.2"
 	},
 	"dependencies": {
+		"@rbxts/janitor": "1.15.7-ts.0",
+		"@rbxts/lemon-signal": "1.10.0-ts.1",
+		"@rbxts/lemon-signal-counter": "0.1.0-ts.1",
 		"@rbxts/services": "^1.5.4"
 	}
 }

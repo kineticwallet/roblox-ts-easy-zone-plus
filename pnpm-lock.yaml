@@ -5,6 +5,15 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@rbxts/janitor':
+    specifier: 1.15.7-ts.0
+    version: 1.15.7-ts.0
+  '@rbxts/lemon-signal':
+    specifier: 1.10.0-ts.1
+    version: 1.10.0-ts.1
+  '@rbxts/lemon-signal-counter':
+    specifier: 0.1.0-ts.1
+    version: 0.1.0-ts.1
   '@rbxts/services':
     specifier: ^1.5.4
     version: 1.5.4
@@ -29,7 +38,7 @@ devDependencies:
     specifier: ^2.3.0
     version: 2.3.0
   typescript:
-    specifier: '=5.2.2'
+    specifier: ^5.2.2
     version: 5.2.2
 
 packages:
@@ -125,6 +134,23 @@ packages:
   /@rbxts/compiler-types@2.3.0-types.0:
     resolution: {integrity: sha512-2kllUXLlK22OzSi3GmLT+/O70U9oB2iXp4rGFk5FLwc1pqf4W9EsInuJ0t7poLE2XnqnpW/ojff9CUNivI2+lw==}
     dev: true
+
+  /@rbxts/janitor@1.15.7-ts.0:
+    resolution: {integrity: sha512-lcg+QECf5aZFH2ZUd5j5Dslt09Hxa5Iy4fjjI7Gh0oDs41BLsY+tP+MTvgjfwzO/3A2JoVQNSwGIfBc2jnC+zA==}
+    dev: false
+
+  /@rbxts/lemon-signal-counter@0.1.0-ts.1:
+    resolution: {integrity: sha512-yB5C34QgL5VIvssg+uh7PR6FLbp/n9gQxY+sztYoNiAo9FH6XicqcGQ7FnApygEEKDd/2mcv0Q6K6KGFwAyYxw==}
+    dependencies:
+      '@rbxts/lemon-signal': 1.10.0-ts.1
+      '@rbxts/services': 1.5.4
+    dev: false
+
+  /@rbxts/lemon-signal@1.10.0-ts.1:
+    resolution: {integrity: sha512-OLxuvzWnGph1avSy1hKm/BRtVEj5iJMlTx6yiHqUKE2NcZrQTkw4gp0PCsEdT4a0fXeOqKNOoUL+N2wVKb03Rw==}
+    dependencies:
+      '@rbxts/services': 1.5.4
+    dev: false
 
   /@rbxts/services@1.5.4:
     resolution: {integrity: sha512-Klh+gRIT8zy3xRTX1YD6FZ9nAMzkzPLTHmciigt59PEF7PJXo31CF0IU0RegQ7VSMrz1iOnXwxbIwy3htcMfOA==}
