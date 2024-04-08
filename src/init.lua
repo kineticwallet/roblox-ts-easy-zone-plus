@@ -207,7 +207,7 @@ function Zone:_calculateRegion(tableOfParts, dontRound)
 		end
 	end
 	for _, part in pairs(tableOfParts) do
-		if part.CanQuery and part.CanQuery == true then
+		if part.CanQuery and part.CanQuery ~= true then
 			warn(`{part:GetFullName()} has CanQuery set to false!`)
 		end
 
