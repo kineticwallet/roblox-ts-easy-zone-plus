@@ -9,11 +9,11 @@ dependencies:
     specifier: 1.15.7-ts.0
     version: 1.15.7-ts.0
   '@rbxts/lemon-signal':
-    specifier: 1.10.0-ts.3
-    version: 1.10.0-ts.3
+    specifier: 1.10.0-ts.4
+    version: 1.10.0-ts.4
   '@rbxts/lemon-signal-counter':
-    specifier: 0.2.0-ts.0
-    version: 0.2.0-ts.0
+    specifier: 0.2.0-ts.1
+    version: 0.2.0-ts.1
 
 devDependencies:
   '@biomejs/biome':
@@ -136,14 +136,14 @@ packages:
     resolution: {integrity: sha512-lcg+QECf5aZFH2ZUd5j5Dslt09Hxa5Iy4fjjI7Gh0oDs41BLsY+tP+MTvgjfwzO/3A2JoVQNSwGIfBc2jnC+zA==}
     dev: false
 
-  /@rbxts/lemon-signal-counter@0.2.0-ts.0:
-    resolution: {integrity: sha512-9xQQZldjcHTNYAHySZXYnYj/DaEOq9pU1PdIGB5fhHVPYZzen4tKkCwdvuxpof0ykd1d+en9C9N+9VBBZrOCqA==}
+  /@rbxts/lemon-signal-counter@0.2.0-ts.1:
+    resolution: {integrity: sha512-TOvR+RFbWnFhMaZvNmrXp9xzKcLrtK26+WPYuLs+KcWu4ak14gOHlfZ2kWB3vKLXlPlJp8PNmVSahKouk0fgpA==}
     dependencies:
-      '@rbxts/lemon-signal': 1.10.0-ts.3
+      '@rbxts/lemon-signal': 1.10.0-ts.4
     dev: false
 
-  /@rbxts/lemon-signal@1.10.0-ts.3:
-    resolution: {integrity: sha512-UQ6bcvlsDWV8cZjZQ2PEbqo865exA6UKygpPNQi6k2HDkWiX8ZooEfSE5q9Avk/U26Q2NIwGV7GD+usGqYbkeg==}
+  /@rbxts/lemon-signal@1.10.0-ts.4:
+    resolution: {integrity: sha512-hvuIk29EGmvAMzYtWyrOz881ElrCQm6J6776lRKn//mEygewIjGt7iTXgCz5u5wHgKKVleAdhB0KfpPS3amKxw==}
     dev: false
 
   /@rbxts/types@1.0.767:

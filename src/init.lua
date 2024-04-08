@@ -75,7 +75,7 @@ function Zone.new(container)
 
 	ZoneController.updateDetection(self)
 
-	self.updated = janitorA:Add(Signal.new(), "Destroy")
+	self.updated = janitor:Add(Signal.new(), "Destroy")
 	local triggerTypes = {
 		"player",
 		"part",
