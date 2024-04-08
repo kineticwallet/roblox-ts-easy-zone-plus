@@ -56,7 +56,7 @@ function Zone.new(container)
 	self.boundMin = nil
 	self.boundMax = nil
 	self.recommendedMaxParts = nil
-	self.zoneId = httpService:GenerateGUID()
+	self.zoneId = httpService:GenerateGUID(false)
 	self.activeTriggers = {}
 	self.occupants = {}
 	self.trackingTouchedTriggers = {}
@@ -97,6 +97,12 @@ function Zone.new(container)
 			local signalName = triggerType .. triggerEventUpper
 			self[signalName] = signal
 			self[signalName .. "_Counter"] = counter
+
+			local indicatorName = "on" .. triggerType:sub(1, 1):upper() .. triggerType:sub(2) .. triggerEventUpper
+
+			self[indicatorName] = function(_, callback)
+				self[signalName .. "_Counter"]:Connect(callback)
+			end
 
 			counter._OnConnectionsChanged:Connect(function(increment)
 				if triggerType == "localPlayer" and not localPlayer and increment == 1 then
@@ -782,14 +788,14 @@ end
 
 function Zone:untrackItem(instance)
 	local itemDetail = self.trackedItems[instance]
+
+	local Tracker = require(trackerModule)
 	Tracker.itemRemoved:Fire(itemDetail)
 
 	if itemDetail then
 		itemDetail.janitor:Destroy()
 	end
 	self.trackedItems[instance] = nil
-
-	local Tracker = require(trackerModule)
 end
 
 function Zone:bindToGroup(settingsGroupName)
