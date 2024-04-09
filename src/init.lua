@@ -95,14 +95,7 @@ function Zone.new(container)
 
 			local triggerEventUpper = triggerEvent:sub(1, 1):upper() .. triggerEvent:sub(2)
 			local signalName = triggerType .. triggerEventUpper
-			self[signalName] = signal
-			self[signalName .. "_Counter"] = counter
-
-			local indicatorName = "on" .. triggerType:sub(1, 1):upper() .. triggerType:sub(2) .. triggerEventUpper
-
-			self[indicatorName] = function(_, callback)
-				self[signalName .. "_Counter"]:Connect(callback)
-			end
+			self[signalName] = counter
 
 			counter._OnConnectionsChanged:Connect(function(increment)
 				if triggerType == "localPlayer" and not localPlayer and increment == 1 then

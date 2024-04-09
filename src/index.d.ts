@@ -1,4 +1,5 @@
-import type { Signal, SignalCallback } from "@rbxts/lemon-signal";
+import type { Signal } from "@rbxts/lemon-signal";
+import { LemonSignalCounter } from "@rbxts/lemon-signal-counter";
 
 interface Zone {
 	// Methods
@@ -67,24 +68,14 @@ interface Zone {
 	destroy(): void;
 
 	// Events
-	readonly localPlayerEntered: Signal<void>;
-	readonly localPlayerExited: Signal<void>;
-	readonly playerEntered: Signal<Player>;
-	readonly playerExited: Signal<Player>;
-	readonly partEntered: Signal<BasePart>;
-	readonly partExited: Signal<BasePart>;
-	readonly itemEntered: Signal<BasePart | Model>;
-	readonly itemExited: Signal<BasePart | Model>;
-
-	//Callback for Events:
-	onLocalPlayerEntered<C extends SignalCallback<void>>(callback: C): void;
-	onLocalPlayerExited<C extends SignalCallback<void>>(callback: C): void;
-	onPlayerEntered<C extends SignalCallback<Player>>(callback: C): void;
-	onPlayerExited<C extends SignalCallback<Player>>(callback: C): void;
-	onPartEntered<C extends SignalCallback<BasePart>>(callback: C): void;
-	onPartExited<C extends SignalCallback<BasePart>>(callback: C): void;
-	onItemEntered<C extends SignalCallback<BasePart | Model>>(callback: C): void;
-	onItemExited<C extends SignalCallback<BasePart | Model>>(callback: C): void;
+	readonly localPlayerEntered: LemonSignalCounter<void>;
+	readonly localPlayerExited: LemonSignalCounter<void>;
+	readonly playerEntered: LemonSignalCounter<Player>;
+	readonly playerExited: LemonSignalCounter<Player>;
+	readonly partEntered: LemonSignalCounter<BasePart>;
+	readonly partExited: LemonSignalCounter<BasePart>;
+	readonly itemEntered: LemonSignalCounter<BasePart | Model>;
+	readonly itemExited: LemonSignalCounter<BasePart | Model>;
 
 	// Properties
 	/**

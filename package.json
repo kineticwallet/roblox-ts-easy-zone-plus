@@ -1,7 +1,7 @@
 {
 	"name": "@rbxts/easy-zone-plus",
 	"description": "A port of 1ForeverHD's Zone+ package for the roblox-ts ecosystem. With LemonSignal & LemonSignalCounter instead of GoodSignal. Additional fixes issues: #72, #68, #47, #67, #70, #45, #61, #56, #52, #49, #48, #44, #42, #41, #40, #39",
-	"version": "3.2.0-ts.5",
+	"version": "3.2.0-ts.6",
 	"main": "dist/init.lua",
 	"keywords": ["zone-plus", "area", "region3"],
 	"author": "kineticwallet",
