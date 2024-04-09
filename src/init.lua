@@ -97,7 +97,7 @@ function Zone.new(container)
 			local signalName = triggerType .. triggerEventUpper
 			self[signalName] = counter
 
-			counter._OnConnectionsChanged:Connect(function(increment)
+			counter.OnConnectionsChanged:Connect(function(increment)
 				if triggerType == "localPlayer" and not localPlayer and increment == 1 then
 					error(("Can only connect to 'localPlayer%s' on the client!"):format(triggerEventUpper))
 				end

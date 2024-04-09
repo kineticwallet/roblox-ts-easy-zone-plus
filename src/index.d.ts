@@ -1,5 +1,4 @@
-import type { Signal } from "@rbxts/lemon-signal";
-import { LemonSignalCounter } from "@rbxts/lemon-signal-counter";
+import { SignalCounter } from "@rbxts/lemon-signal-counter";
 
 interface Zone {
 	// Methods
@@ -68,14 +67,14 @@ interface Zone {
 	destroy(): void;
 
 	// Events
-	readonly localPlayerEntered: LemonSignalCounter<void>;
-	readonly localPlayerExited: LemonSignalCounter<void>;
-	readonly playerEntered: LemonSignalCounter<Player>;
-	readonly playerExited: LemonSignalCounter<Player>;
-	readonly partEntered: LemonSignalCounter<BasePart>;
-	readonly partExited: LemonSignalCounter<BasePart>;
-	readonly itemEntered: LemonSignalCounter<BasePart | Model>;
-	readonly itemExited: LemonSignalCounter<BasePart | Model>;
+	readonly localPlayerEntered: SignalCounter<void>;
+	readonly localPlayerExited: SignalCounter<void>;
+	readonly playerEntered: SignalCounter<Player>;
+	readonly playerExited: SignalCounter<Player>;
+	readonly partEntered: SignalCounter<BasePart>;
+	readonly partExited: SignalCounter<BasePart>;
+	readonly itemEntered: SignalCounter<BasePart | Model>;
+	readonly itemExited: SignalCounter<BasePart | Model>;
 
 	// Properties
 	/**
